@@ -12,7 +12,7 @@ e.g. for testing ansible roles.
 docker pull marvelnccr/ubuntu-docker-base:latest  # latest version
 docker pull marvelnccr/ubuntu-docker-base:1.0     # v1.0 tag
 ```
-Using a specific tag is strongly recommended for reprodible builds.
+Using a specific tag is strongly recommended for reproducible builds.
 
 ## Acknowledgements
 
