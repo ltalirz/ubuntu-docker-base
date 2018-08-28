@@ -18,5 +18,5 @@ before_install:
   - 'sudo docker build --no-cache --rm --file=${dockerfile} --tag=${label}:ansible .'
 
 script:
-  - 'sudo docker run --name ${container_id} ${label}:ansible'
+  - 'sudo docker run --name ${container_id} --detach --privileged -v /sys/fs/cgroup:/sys/fs/cgroup:ro ${label}:ansible'
   - 'sudo docker exec --user ${ansible_user} "${container_id}" env ANSIBLE_FORCE_COLOR=1 ansible-playbook --version'
